@@ -38,9 +38,15 @@
     height: 62%;
     /* background-color: rgb(158, 91, 183); */
     display: flex;
+  
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.Petsfirstpic{
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
 }
 .appFooter{
     width: 100%;

@@ -5,6 +5,7 @@ import { Box, Button, IconButton, Stack, Typography} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { UserContext } from '../../App';
+import Image from '../Image/pet-img.jpg'
 
 
 const AppFirstPage = () => {
@@ -28,7 +29,9 @@ const AppFirstPage = () => {
         <Typography variant='h5'>Adopt Me</Typography>
       </Box>
     <Box className={style['appPetpic']}>
-     <Typography sx={{border:"2px solid black",borderRadius:"50%",padding:2}}>Pic</Typography>
+    
+      <img className={style['Petsfirstpic']} src={Image} alt='pet-pic' width={100} height={100}/>
+   
     </Box>
    </div>
    <div className={style['appFooter']}>
