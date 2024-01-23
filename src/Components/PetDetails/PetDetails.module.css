@@ -1,0 +1,213 @@
+.petDetails-container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+    
+}
+.loading{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.alert{
+    width: 100%;
+    position: fixed;
+    top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.back-button{
+    position: fixed;
+    top: 2%;
+    left: 4%;
+   
+}
+.pet-pic{
+    width: 100vw;
+    height: 40vh;
+    /* background-color: rgb(216, 184, 123); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pet-desc{
+    width: 100vw;
+    height: 70vh;
+    
+    background-color: white; 
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    padding: 10px;
+}
+.pet-name{
+    width: 100%;
+    min-height: 60px;
+    /* background-color: rgb(185, 197, 146);  */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.pet-name-section{
+    width: 70%;
+    min-height: 60px;
+    /* background-color: rgb(124, 165, 165);  */
+    display: flex;
+    flex-direction: column;
+}
+.pet-name-first{
+font-size: 20px;
+font-weight: bold;
+padding: 5px;
+text-transform: capitalize;
+
+}
+.pet-location{
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    font-size: 16px;
+    
+}
+.pet-location>span{
+    color: blue;
+}
+.pet-location>p{
+    color:gray;
+}
+.pet-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    padding-left: 5px;
+}
+.pet-whishlist-Part{
+    width: 30%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whislist-icon{
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30%;
+    cursor: pointer;
+}
+.pet-description{
+    width: 100%;
+    height: 130px;
+    /* background-color: rgb(133, 172, 166);   */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.pet-ownerDetails{
+    width: 100%;
+    min-height: 200px;
+    /* background-color: rgb(165, 131, 183);  */
+}
+.pet-ownerDetails-firstPart{
+    width: 100%;
+    height: 60px;
+    background-color: white; 
+    display: flex;
+     flex-direction: row;
+    align-items: center;
+}
+.pet-ownerIconPart{
+    width: 60%;
+    height: 60px;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+}
+.pet-ownerName{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.pet-ownerName>h4{
+    text-transform: capitalize;
+    font-size: 17px;
+   
+}
+.pet-ownerName>p{
+    color: gray;
+    
+}
+.pet-contact-details{
+    width: 40%;
+    height: 60px;
+    /* background-color: rgb(140, 197, 134); */
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+.pet-Msg{
+    width: 30%;
+    height: 35px;
+    /* background-color: rgb(119, 185, 190); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    color:rgb(73, 73, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.pet-call{
+    width: 30%;
+    height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    /* background-color: rgb(141, 191, 98); */
+    color:rgb(192, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.pet-pet-desc{
+    width: 100%;
+    min-height: 100px;
+    padding: 5px;
+   
+    /* background-color: aqua; */
+}
+.pet-pet-desc>div{
+    text-transform: capitalize;
+
+}
+.pet-pet-desc>span{
+    color: yellow;
+}
+.pet-button{
+    width: 100%;
+    height: 40px;
+    background-color:rgb(24, 164, 172) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 7px;
+}

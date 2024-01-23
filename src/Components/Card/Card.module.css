@@ -1,0 +1,51 @@
+.card-container{
+    width: 300px;
+    height:300px ;
+    /* background-color: rgb(166, 190, 118); */
+    border-radius: 20px;
+   
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 8px;
+    margin-top: 15px;
+    padding:20px;
+   
+}
+.card-header{
+    width: 100%;
+   /* background-color: rgb(105, 156, 182); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card-header-label{
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   margin-left:10px;
+
+}
+.card-header-label>h4{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.card-header-label>p{
+    font-size: 15px;
+    color: gray;
+}
+.card-pic{
+    width: 100%;
+    height:150px;
+    /* background-color: blue; */
+    border-radius: 20px;
+    margin-top: 8px;
+}
+.card-pic>img{
+    border-radius: 20px;
+}
+.card-pet-name{
+    padding: 5px;
+    /* background-color: red; */
+    font-size: 17px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}

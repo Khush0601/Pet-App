@@ -1,0 +1,10 @@
+.order-container{
+    width: 100vw;
+    height: 100Vh;
+    /* background-color: aqua; */
+    padding: 10px;
+}
+.order-card>p{
+ margin-top: 20px;
+ margin-bottom: 20px;
+}

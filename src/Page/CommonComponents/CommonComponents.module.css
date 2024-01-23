@@ -1,0 +1,17 @@
+.card{
+    width: 80px;
+    height: 80px;
+    border-radius: 30% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.card>h3{
+    color: black;
+
+}
+.card>p{
+    color: gray;
+}

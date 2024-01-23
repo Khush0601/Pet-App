@@ -1,0 +1,30 @@
+.signUp-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signUp-container>form{
+    width: 85vw;
+    min-height: 30vh;
+    /* background-color: rgb(223, 214, 158); */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    border-radius: 20px;
+}
+.input-container{
+   
+    padding: 3px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

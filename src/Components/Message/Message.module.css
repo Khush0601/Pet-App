@@ -1,0 +1,42 @@
+.msg-container{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(158, 107, 107); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-transform: capitalize;
+}
+.msg-box{
+    width: 100%;
+    min-height: 10vh;
+    /* background-color: rgb(107, 158, 116); */
+    display: flex;
+    flex-direction: column;
+ 
+}
+.msg-box>h3{
+    font-weight: 700;
+}
+.msg-box>form{
+    width: 100%;
+    min-height: 30px;
+    /* background-color: rgb(100, 134, 189); */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    
+
+}
+.msg-box>form>input{
+ padding: 20px;
+ width: 100%;
+ min-height: 30px;
+ border: none;
+ outline: none;
+ border-radius: 10px;
+ text-transform: capitalize;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
