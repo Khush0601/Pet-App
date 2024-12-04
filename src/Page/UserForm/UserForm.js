@@ -9,7 +9,7 @@ const UserForm = () => {
   const[userForm,setUserForm]=useState(
     {
       name:"",
-      sex:"",
+      gender:"",
       age:"",
       id:"",
       image:[''],
@@ -84,7 +84,7 @@ const UserForm = () => {
         </div>
         <div className={style['input-container']}>
             <label>sex:</label>
-            <input type='text' placeholder='type sex' value={userForm.sex} onChange={(e)=>onUserFormUpdate(e,'sex')}/>
+            <input type='text' placeholder='type gender' value={userForm.gender} onChange={(e)=>onUserFormUpdate(e,'gender')}/>
         </div>
         <div className={style['input-container']}>
             <label>age:</label>
