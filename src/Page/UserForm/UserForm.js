@@ -38,17 +38,24 @@ const UserForm = () => {
   const navigate=useNavigate()
   const onSubmit=async(e)=>{
    e.preventDefault()
+   if(!userForm.name || !userForm.age || !userForm.gender){
+    setError('please provide details')
+    setSuccess('')
+    setTimeout(()=>{
+      setError('')
+    },2000)
+    return
+   }
    try{
    const userFormData=await axios.post('https://pet-addoption.onrender.com/petApp/api/v1/userDetails',
    userForm
   )
-  setUserFullDetails(userFormData.data)
+  setUserFullDetails(userFormData?.data)
   setSuccess('Details filled successfully')
   setTimeout(()=>{
-   setSuccess('')
-   setError('')
-   navigate('/logIn')
-  },[1000*2])
+  setSuccess('')
+  navigate("/logIn")
+  },2000)
   
    }
    catch(e){
@@ -56,7 +63,7 @@ const UserForm = () => {
     setSuccess('')
     setTimeout(()=>{
      setError('')
-    },[1000*2])
+    },2000)
    }
   }
   console.log(user?.localId)
@@ -83,17 +90,17 @@ const UserForm = () => {
             <input type='text' placeholder='type name' value={userForm.name} onChange={(e)=>onUserFormUpdate(e,'name')}/>
         </div>
         <div className={style['input-container']}>
-            <label>sex:</label>
+            <label>Gender:</label>
             <input type='text' placeholder='type gender' value={userForm.gender} onChange={(e)=>onUserFormUpdate(e,'gender')}/>
         </div>
         <div className={style['input-container']}>
             <label>age:</label>
             <input type='text' placeholder='type age' value={userForm.age} onChange={(e)=>onUserFormUpdate(e,'age')}/>
         </div>
-        <div className={style['input-container']}>
+        {/* <div className={style['input-container']}>
             <label>Image:</label>
             <input type='text' placeholder='Enter Image URL' value={userForm.image[0]} onChange={(e)=>onUserFormUpdate(e,'image')}/>
-        </div>
+        </div> */}
         <div className={style['input-container']}>
             <label>Id:</label>
             <input type='text' placeholder='id' value={userForm.id}  disabled/>
