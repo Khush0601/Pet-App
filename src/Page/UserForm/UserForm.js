@@ -36,6 +36,7 @@ const UserForm = () => {
   const [error,setError]=useState('')
   const [success,setSuccess]=useState('')
   const navigate=useNavigate()
+
   const onSubmit=async(e)=>{
    e.preventDefault()
    if(!userForm.name || !userForm.age || !userForm.gender){
@@ -97,16 +98,16 @@ const UserForm = () => {
             <label>age:</label>
             <input type='text' placeholder='type age' value={userForm.age} onChange={(e)=>onUserFormUpdate(e,'age')}/>
         </div>
-        {/* <div className={style['input-container']}>
+        <div className={style['input-container']}>
             <label>Image:</label>
             <input type='text' placeholder='Enter Image URL' value={userForm.image[0]} onChange={(e)=>onUserFormUpdate(e,'image')}/>
-        </div> */}
+        </div>
         <div className={style['input-container']}>
             <label>Id:</label>
             <input type='text' placeholder='id' value={userForm.id}  disabled/>
         </div>
       
-       <Button type='submit' variant='contained' fullWidth  >Submit</Button>
+       <Button type='submit' variant='contained' fullWidth >Submit</Button>
      
      </form>
     </div>

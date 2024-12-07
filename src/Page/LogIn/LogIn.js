@@ -57,11 +57,11 @@ const {user,setUser}=useContext(UserContext)
     }
   }
 
-  React.useEffect(()=>{
-  if(user){
-    navigate(-1)
-  }
-  },[user])
+  // React.useEffect(()=>{
+  // if(user){
+  //   navigate(-1)
+  // }
+  // },[user])
   console.log(loginUser)
   return (
     <div className={style['login-container']}>
