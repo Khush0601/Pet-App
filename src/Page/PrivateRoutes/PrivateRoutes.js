@@ -6,9 +6,9 @@ const PrivateRoutes = ({children}) => {
   const {user,setUser,userFullDetails,setUserFullDetails}=useContext(UserContext)
   console.log(userFullDetails)
  if(user){
-  return(
-    <>{ children }</>
-  )
+  return   <>{ children }</>
+  
+  
  }
  else{
   return <Navigate  to="/logIn"/>

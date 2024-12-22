@@ -64,7 +64,7 @@ export const UserContext=createContext()
       <Route path='/message' element={<Message/>}/>
       <Route path='/call' element={<Call/>}/>
       <Route path='/userForm' element={<UserForm/>}/>
-      <Route path='/payment/:petId' element={<Payment/>}/>
+      <Route path='/payment/:petId' element={<PrivateRoutes><Payment/></PrivateRoutes>}/>
       <Route path='/order' element={<Order/>}/>
     </Routes>
     </BrowserRouter>

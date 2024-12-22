@@ -133,7 +133,7 @@ const PetDetails = () => {
                 </div>
                <div className={style['pet-contact-details']}>
                    <div className={style['pet-Msg']}><MapsUgcOutlinedIcon onClick={()=>navigate('/message')}/></div>
-                   <div className={style['pet-call']}><AddIcCallOutlinedIcon onClick={()=>navigate('/call')}/></div>
+                   {/* <div className={style['pet-call']}><AddIcCallOutlinedIcon onClick={()=>navigate('/call')}/></div> */}
                </div>
                </div>
                 <div className={style['pet-pet-desc']}>

@@ -2,15 +2,18 @@ import React, { useContext, useState } from 'react'
 import style from './WhisList.module.css'
 import { UserContext } from '../../App'
 import axios from 'axios'
-import { Divider } from '@mui/material'
+import { Button, Divider } from '@mui/material'
 import HeaderNavBar from '../HeaderNavBar/HeaderNavBar'
 import BottomNavBar from '../BottomNavBar/BottomNavBar'
 import Card from '../../Components/Card/Card'
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router'
 
 const WhisList = () => {
   const {user,setUser,userFullDetails,setUserFullDetails}=useContext(UserContext)
+  
   const[whishListData,setWhishListData]=useState([])
+  const navigate=useNavigate()
  React.useEffect(()=>{
   const whishListUser=async()=>{
     try{
@@ -20,7 +23,7 @@ const WhisList = () => {
       setWhishListData(result.data)
      }
     catch(e){
-      console.log(e)
+     console.log(e?.response?.data?.message)
     }
    }
    whishListUser()
@@ -45,7 +48,12 @@ console.log(whishListData)
   <Divider/>
   <div className={style['whislist-mainPart']}>
    {
-    whishListData.map((cardData,cardIndex)=>{
+   whishListData.length===0?
+   <div style={{textAlign:'center',marginTop:'50px'}}>
+   <h2>Pet not in your whishlist</h2>
+   <Button variant='contained' sx={{margin:1}} onClick={()=>navigate('/home')}>WishList</Button>
+   </div>:
+   whishListData.map((cardData,cardIndex)=>{
     return <div className={style['whislist-cards']}>
       <div className={style['remove-icon']} onClick={()=>onRemoveClick(cardData)}>
         <CloseIcon />

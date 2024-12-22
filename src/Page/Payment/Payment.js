@@ -5,6 +5,7 @@ import { useFetchHooks } from '../../Components/Hooks/useFetchHooks'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import { UserContext } from '../../App'
+import BackButton from '../../Components/BackButton/BackButton'
 const Payment = () => {
   const {user,setUser,userFullDetails,setUserFullDetails}=useContext(UserContext)
   let fetchResult=useFetchHooks('https://pet-addoption.onrender.com/petApp/api/v1/payment/paymentinfo')
@@ -42,7 +43,10 @@ catch(e){
   console.log(payment)
   return (
     <div className={style['pay-container']}>
-     <h3>Payment</h3>
+    <div style={{display:'flex'}}>
+    <BackButton/>
+    <h3>Payment</h3>
+    </div>
      <Divider/>
      <div className={style['payment-container']}>
       {

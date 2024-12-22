@@ -9,8 +9,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import style from './HeaderNavBar.module.css'
 import PetsIcon from '@mui/icons-material/Pets';
 import SortIcon from '@mui/icons-material/Sort';
+import { useNavigate } from 'react-router';
 
 const HeaderNavBar = () => {
+  const navigate=useNavigate()
   return (
     <div className={style['header-nav']}>
         <Box className={style['header-nav-box']} sx={{ flexGrow: 1 }}>
@@ -28,8 +30,8 @@ const HeaderNavBar = () => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Adopt Me
           </Typography>
-          <Button color="inherit" ><FavoriteIcon/></Button>
-          <Button color="inherit"><SortIcon/></Button>
+          <Button color="inherit" onClick={()=>navigate('/whishList')} ><FavoriteIcon/></Button>
+        
         </Toolbar>
       </AppBar>
     </Box>

@@ -85,7 +85,8 @@ const UserProfile = () => {
   }
 
     console.log(userEdit)
-
+    console.log('userFull',userFullDetails)
+    console.log(user,'user')
   return (
     <div className={style['userProfile-container']}>
       <div className={style['userProfile-icon']}>
@@ -104,8 +105,8 @@ const UserProfile = () => {
        <input type='text' placeholder='type age' value={userFullDetails?.age} disabled />
        </div>
        <div className={style['input']}>
-       <label>sex:</label>
-       <input type='text' placeholder='type sex' value={userFullDetails?.sex} disabled />
+       <label>Gender:</label>
+       <input type='text' placeholder='type gender' value={userFullDetails?.gender} disabled />
        </div >
       <div className={style['edit']}> 
       <IconButton  color='primary' size="large" onClick={handleOpen}>

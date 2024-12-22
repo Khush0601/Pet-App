@@ -4,7 +4,8 @@ import { Alert, Button, TextField } from '@mui/material'
 import { TextFieldPasswordIcon } from '../CommonComponents/CommonComponent'
 import axios from 'axios'
 import { UserContext } from '../../App'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import BackButton from '../../Components/BackButton/BackButton'
 const LogIn = () => {
 const {user,setUser}=useContext(UserContext)
   const [loginUser,setLogInUser]=useState(
@@ -77,7 +78,10 @@ const {user,setUser}=useContext(UserContext)
        </Alert>
       }
       </>
-      <h4>Login Your Account</h4>
+     <div style={{display:'flex'}}>
+    
+     <h3>Login Your Account</h3>
+     </div>
       <form onSubmit={loginUsers} >
       <div className={style['input-container']}>
      <TextField fullWidth label="Email" id="email" value={loginUser.email} onChange={(e)=>onInputUpdate(e,'email')} />
@@ -88,6 +92,7 @@ const {user,setUser}=useContext(UserContext)
      
      <div className={style['input-container']}>
      <Button variant="contained" type='submit'>LogIn</Button>
+     <Link to='/signUp' style={{marginLeft:"20px",color:"blue"}}>SignUp</Link>
      </div>
       </form>
     </div>

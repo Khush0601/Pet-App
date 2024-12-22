@@ -7,6 +7,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { UserContext } from '../../App';
+import LoginIcon from '@mui/icons-material/Login';
 import { useNavigate } from 'react-router-dom';
  
 
@@ -21,8 +22,10 @@ const BottomNavBar = () => {
  const onLogOut=()=>{
   localStorage.removeItem('user')
   setUser(undefined)
+  alert('logout successfully')
   
  }
+ 
   return (
     <div  className={style['navBar-container']}>
        <BottomNavigation sx={{ width: 400 }} value={value} onChange={handleChange} >
@@ -40,9 +43,22 @@ const BottomNavBar = () => {
       <BottomNavigationAction
         label="Profile"
         value="userAccount"
-        icon={<AccountCircleIcon  onClick={()=>navigate('/userProfile')}/>}
+        icon={<AccountCircleIcon   onClick={()=>navigate('/userProfile')}/>}
       />
-      <BottomNavigationAction label="Log Out" value="logOut" icon={<LogoutIcon onClick={onLogOut} />} />
+      {/* <BottomNavigationAction label="Log Out" value="logOut"  icon={<LogoutIcon onClick={onLogOut} />} /> */}
+      {user ? (
+          <BottomNavigationAction
+            label="Log Out"
+            value="logOut"
+            icon={<LogoutIcon onClick={onLogOut} />}
+          />
+        ) : (
+          <BottomNavigationAction
+            label="Log In"
+            value="logIn"
+            icon={<LoginIcon onClick={() => navigate('/logIn')} />}
+          />
+        )}
     </BottomNavigation>
     </div>
   )
