@@ -14,6 +14,7 @@ import UserForm from './Page/UserForm/UserForm'
 import axios from 'axios'
 import Payment from './Page/Payment/Payment'
 import Order from './Page/Order/Order'
+import PaymentSuccess from './Page/PaymentSuccess/PaymentSuccess'
 
 export const UserContext=createContext()
  const App = () => {
@@ -65,6 +66,7 @@ export const UserContext=createContext()
       <Route path='/call' element={<Call/>}/>
       <Route path='/userForm' element={<UserForm/>}/>
       <Route path='/payment/:petId' element={<PrivateRoutes><Payment/></PrivateRoutes>}/>
+      <Route path="/home/Payment/scccess/:paymentId" element={<PaymentSuccess/>}/>
       <Route path='/order' element={<Order/>}/>
     </Routes>
     </BrowserRouter>

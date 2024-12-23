@@ -152,7 +152,7 @@ const PetDetails = () => {
                   </div> 
                   
                 </div>
-                <div className={style['pet-button']} onClick={()=>navigate(`/payment/${fetchResult?.response?._id}`)}>
+                <div className={style['pet-button']} onClick={()=>navigate(`/payment/${fetchResult?.response?._id}`,{state:fetchResult?.response})}>
                  Adopt Me
                 </div>
 
