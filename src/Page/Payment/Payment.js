@@ -37,6 +37,7 @@ const Payment = () => {
        
        }
      }
+     
  console.log(userFullDetails,'user')
   return (
     <div className={style['pay-container']}>
