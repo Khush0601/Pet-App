@@ -17,7 +17,10 @@
 }
 .whislist-mainPart{
     width: 100vw;
-   
+   padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     /* background-color: lightgray; */
 }
 
@@ -25,13 +28,15 @@
     position: relative;
     display: flex;
     justify-content: center;
+   
+    
 }
 .remove-icon{
     position: absolute;
     background-color: rgb(239, 227, 227);
     color: black;
     top: 4%;
-    right: 10%;
+    right: 3%;
     width: 25px;
     height: 25px;
     border-radius: 50%;

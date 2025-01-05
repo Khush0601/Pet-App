@@ -28,7 +28,7 @@ const BottomNavBar = () => {
  
   return (
     <div  className={style['navBar-container']}>
-       <BottomNavigation sx={{ width: 400 }} value={value} onChange={handleChange} >
+       <BottomNavigation sx={{ width: '100%' }} value={value} onChange={handleChange} >
       <BottomNavigationAction
         label="Home"
         value="home"

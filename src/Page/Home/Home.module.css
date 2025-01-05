@@ -85,10 +85,11 @@ height: 50px;
     width: 100%;
     flex-grow: 1;
     /* background-color: aqua; */
+   
+    
     display: flex;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .reset{
     margin-top: 20px;

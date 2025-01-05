@@ -95,7 +95,7 @@ const UserProfile = () => {
         <Divider/>
         <div className={style['icon']}><Avatar sx={{width:70,height:70}} alt={userFullDetails?.name} src={userFullDetails?.image[0]} /></div>
       </div>
-      <form >
+      <form className={style['user-form']}>
        <div className={style['input']} >
        <label>Name:</label>
        <input type='text' value={userFullDetails?.name} placeholder='type name' disabled/>
