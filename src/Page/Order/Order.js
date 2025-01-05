@@ -9,7 +9,7 @@ import Loading from '../../Components/Loading/Loading'
 import { useNavigate } from 'react-router'
 const Order = () => {
     const {user,setUser,userFullDetails,setUserFullDetails}=useContext(UserContext)
-    let fetchOrderDetails=useFetchHooks(`https://pet-addoption.onrender.com/petApp/api/v1/order/orderList/${userFullDetails?.id}`)
+    let fetchOrderDetails=useFetchHooks(`https://pet-addoption.onrender.com/petApp/api/v1/order/orderList/${userFullDetails?._id}`)
     console.log(fetchOrderDetails?.response)
     const navigate=useNavigate()
   return (
@@ -19,18 +19,20 @@ const Order = () => {
       <h3>Order</h3>
       </div>
       <Divider/>  
+      <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
       {
         fetchOrderDetails?.response?.length>0 && <>
         {
      fetchOrderDetails?.response?.map((orderEl,orderIndex)=>{
         return <div className={style['order-card']} key={orderIndex}> 
         <p>Transaction Id:<b>{orderEl?.transitionId}</b></p>
-       <Card key={orderIndex} el={orderEl?.orderDetails} i={orderIndex}/>
+       <Card key={orderIndex} el={orderEl?.productId} i={orderIndex}/>
         </div>
      })   
      }
         </>
       }
+      </div>
       {fetchOrderDetails.loading && <Loading/>}
 
       {

@@ -17,7 +17,7 @@ const Payment = () => {
  
   const handlePayment=async()=>{
     try{
-        const paymentDetails=await axios.post('http://localhost:4040/petApp/api/v1/payment/onPayment',{
+        const paymentDetails=await axios.post('https://pet-addoption.onrender.com/petApp/api/v1/payment/onPayment',{
          productId:petDetails?._id,
          userId:userFullDetails?._id,
        

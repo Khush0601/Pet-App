@@ -12,7 +12,7 @@ const PaymentSuccess = () => {
    React.useEffect(()=>{
     const updateOrder=async()=>{
     try{
-    const updatedData=await axios.patch(`http://localhost:4040/petApp/api/v1/payment/onPaymentStatus`,{
+    const updatedData=await axios.patch(`https://pet-addoption.onrender.com/petApp/api/v1/payment/onPaymentStatus`,{
         orderId:params.paymentId
     })
     setPaymentStatus(updatedData?.data)
