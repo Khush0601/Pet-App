@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import AppFirstPage from './Page/AppfirstPage/AppFirstPage'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import SignUp from './Page/SignUp/SignUp'
 import LogIn from './Page/LogIn/LogIn'
 import Home from './Page/Home/Home'
@@ -55,7 +55,8 @@ export const UserContext=createContext()
    <UserContext.Provider value={userContextData}>
      <BrowserRouter>
     <Routes>
-      <Route index element={<AppFirstPage/>}/>
+      <Route index element={<Navigate to='/landingPage'/>}/>
+      <Route path='/landingPage' element={<AppFirstPage/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/logIn' element={<LogIn/>}/>
       <Route path='/home' element={<Home/>}/>
